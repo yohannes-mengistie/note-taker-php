@@ -1,6 +1,7 @@
 <?php
+namespace Core;
 
-class validator{
+class Validator{
     public function string($value){
         return strlen(trim($value) === 0);
     }

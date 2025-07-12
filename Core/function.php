@@ -15,10 +15,10 @@ function urlIs($value){
 
 function abort($code) {
     if($code === 403){
-        require 'views/403.view.php';
+        require base_path('views/403.view.php');
     }
     else if($code ===404){
-        require 'views/404.view.php';
+        require base_path('views/404.view.php');
     }
     exit;
 }
