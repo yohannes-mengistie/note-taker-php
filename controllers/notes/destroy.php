@@ -7,7 +7,7 @@ use Core\Database;
 $db = App::container()->resolve('Core\Database');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $userId = 1;
+    $userId = $_SESSION['user']['id'] ?? null;
     $id = $_POST['id'] ?? null;
     $note = $db->query("SELECT * FROM notes where id = :id", ['id' => $id])->findOrFail();
     $db->authorization($note['user_id'] === $userId);

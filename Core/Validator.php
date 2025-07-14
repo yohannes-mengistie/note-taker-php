@@ -2,7 +2,7 @@
 namespace Core;
 
 class Validator{
-    public function string($value){
+    public static function string($value){
         return strlen(trim($value) === 0);
     }
 

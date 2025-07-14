@@ -18,7 +18,7 @@ $heading = 'Note';
 
 
 
-$userId = 1;
+$userId = $_SESSION['user']['id'] ?? null;
 
 $db->authorization($note['user_id'] === $userId);
 $heading = 'Edit Note';

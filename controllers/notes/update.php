@@ -2,7 +2,7 @@
 use Core\App;
 use Core\Validator;
 $db = App::container()->resolve('Core\Database');
-$userId = 1;
+$userId = $_SESSION['user']['id'] ?? null;
 
 $id = $_POST['id'] ?? null;
 $note = $db->query("SELECT * FROM notes where id = :id", ['id' => $id])->findOrFail();

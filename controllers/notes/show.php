@@ -6,7 +6,7 @@ use Core\App;
 // $db = new Database($config);
 
 $db = App::container()->resolve('Core\Database');
-$userId = 1;
+$userId = $_SESSION['user']['id'] ?? null;
 
 $id = $_GET['id'] ?? null;
 $note = $db->query("SELECT * FROM notes where id = :id", ['id' => $id])->findOrFail();

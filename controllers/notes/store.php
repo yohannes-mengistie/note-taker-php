@@ -29,7 +29,7 @@ if(!empty($error)){
 if (empty($error)) {
     $db->query("insert into notes(body,user_id) values(:body, :user_id)", [
         'body' => $_POST['body'],
-        'user_id' => 1 // hardcoded user id for now
+        'user_id' => $_SESSION['user']['id']// hardcoded user id for now
     ]);
 
     header('Location: /notes'); 

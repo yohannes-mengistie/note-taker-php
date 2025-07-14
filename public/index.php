@@ -1,9 +1,10 @@
 <?php
 const BASE_PATH = __DIR__ . '/../';
-
+session_start();
 require BASE_PATH . 'Core/function.php';
 // require base_path('database.php');
 // require base_path('response.php');
+
 
 
 spl_autoload_register(function($class){

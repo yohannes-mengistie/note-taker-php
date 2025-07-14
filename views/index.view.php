@@ -4,7 +4,7 @@
 <?php require base_path('views/partial/banner.php') ?>
   <main>
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-      <p>hello home people</p>
+      <p>hello <?= $_SESSION['user']['email'] ?? 'Guest' ?>. welcom to home page</p>
     </div>
   </main>
 <?php require  base_path('views/partial/footer.php') ?>
